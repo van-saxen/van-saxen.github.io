@@ -5,6 +5,7 @@ function newRoom() {
     var roomNames = ['Library', 'Crypt', 'Tomb', 'Guard room'];
     var roomName = roomNames[Math.floor(Math.random()*roomNames.length)];
     document.getElementById("changeRoomName").innerHTML = roomName;
+    document.title = roomName + ' - nameless, dark places';
 
     // Adjectives 
 
@@ -37,6 +38,9 @@ function newRoom() {
     var directions = ["north", "south", "east", "west"];
     var direction = directions[Math.floor(Math.random()*directions.length)];
     document.getElementById("changeDirection").innerHTML = direction + ':';
+
+
+
 
     
 }
