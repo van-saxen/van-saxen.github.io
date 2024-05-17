@@ -42,6 +42,3 @@ function newRoom() {
     createRoom();
     moveFocus();
 }
-
-
-

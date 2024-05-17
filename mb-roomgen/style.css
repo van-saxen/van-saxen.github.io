@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=IM+Fell+DW+Pica:ital@0;1&display=swap');
 
-html {
-    /* font-size: 32px; testing here */
-}
-
 *:focus-visible,
 *:focus {
     outline: black solid 4px;
@@ -53,6 +49,7 @@ button {
     background-color: white;
     padding: 16px 32px;
     border: 2px solid black;
+    font-family: "IM Fell DW Pica", serif;
     font-size: 1rem;
     width: 100%;
 }
