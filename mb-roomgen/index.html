@@ -6,23 +6,23 @@
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
     </head>
-    <body onload="newRoom()">
+    <body onload="createRoom()">
         <div class="main-container">
             <header aria-labelledby="page-title">
                 <h1 id="page-title">nameless, dark places</h1>
                 
             </header>
-            <section aria-labelledby="changeRoomName">
+            <section aria-labelledby="room-name">
                 <p>You crawl deeper into the darkness and enter a...</p>
                 <div class="roomheader">
-                    <h2 id="changeRoomName" tabindex="-1"></h2>
-                    <p id="changeAdjectives1"></p>
+                    <h2 id="room-name" tabindex="-1"></h2>
+                    <p id="room-adjectives"></p>
                 </div>
-                <ul aria-label="room contents">
-                    <li id="changeRoomDressing"></li>
-                    <li><span class="small-caps" id="changeDirection">:</span> <span id="changeAdjectives2"></span></li>
+                <ul>
+                    <li id="room-dressing"></li>
+                    <li><span class="small-caps" id="door-direction">:</span> <span id="clue-adjectives"></span></li>
                 </ul>
-                <button id="button" onclick="newRoom(), moveFocus()">Delve deeper</button>
+                <button id="button" onclick="newRoom()">Delve deeper</button>
             </section>
             <footer>
                 <strong>nameless, dark places</strong> is an independent production by ASN and is not affiliated with Ockult Örtmästare Games or Stockholm Kartell. It is published under the MÖRK BORG Third Party License.
