@@ -40,8 +40,11 @@ function moveFocus() {
 
 function checkTheme() {
     const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'light'){ document.documentElement.setAttribute("data-theme", "dark"); }
-    else { document.documentElement.setAttribute("data-theme", "light"); }
+    if (
+        currentTheme === 'light'){ document.documentElement.setAttribute("data-theme", "light"); 
+    } else { 
+        document.documentElement.setAttribute("data-theme", "dark"); 
+    }
 }
 
 function switchTheme() {
@@ -50,8 +53,7 @@ function switchTheme() {
     if (currentTheme === 'light'){
         document.documentElement.setAttribute("data-theme", "dark");
         localStorage.setItem('theme', 'dark');
-    }
-    else {
+    } else {
         document.documentElement.setAttribute("data-theme", "light");
         localStorage.setItem('theme', 'light');
     }
