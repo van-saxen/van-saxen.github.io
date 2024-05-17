@@ -16,7 +16,7 @@ body {
     display: flex;
 
     background-color: #fff;
-    background-image: url(https://img.itch.zone/aW1nLzgwMjIxNjMucG5n/original/ayzeF6.png);
+    background-image: url('../bg_light.png');
     background-repeat: repeat;
     background-position: 50% 0;
 }
