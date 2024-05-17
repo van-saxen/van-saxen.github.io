@@ -13,19 +13,30 @@ body {
     font-weight: 400;
     margin: 24px 16px;
 
+    display: flex;
+
     background-color: #fff;
     background-image: url(https://img.itch.zone/aW1nLzgwMjIxNjMucG5n/original/ayzeF6.png);
     background-repeat: repeat;
     background-position: 50% 0;
 }
 
+.main-container {
+    margin: 0;
+    max-width:800px;
+}
+
 @media screen and (min-width:600px) {
     body {
-        max-width: 600px;
-        margin: 48px auto;
+        font-size: 1.2rem;
+        margin: 16px;
     }
     .main-container {
-        margin: 16px;
+        margin: 48px auto;
+        width: 50%;
+    }
+    button {
+        font-size: 1.2rem;
     }
 }
 
@@ -55,7 +66,7 @@ button {
     padding: 16px 32px;
     border: 2px solid black;
     font-family: "IM Fell DW Pica", serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     width: 100%;
 }
 button:hover {
@@ -76,7 +87,7 @@ button:active {
 footer {
     margin: 48px 0;
     color: #595959;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
