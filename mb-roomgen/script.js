@@ -43,8 +43,6 @@ function newRoom() {
     moveFocus();
 };
 
-
-
 function switchTheme() {
     const currentTheme = localStorage.getItem('theme');
 
