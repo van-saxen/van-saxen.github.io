@@ -11,8 +11,7 @@ body {
     font-family: "IM Fell DW Pica", serif;
     font-size: 1rem;
     font-weight: 400;
-    margin: 4em auto;
-    max-width: 600px;
+    margin: 24px 16px;
 
     background-color: #fff;
     background-image: url(https://img.itch.zone/aW1nLzgwMjIxNjMucG5n/original/ayzeF6.png);
@@ -20,8 +19,14 @@ body {
     background-position: 50% 0;
 }
 
-.main-container {
-    margin: 16px;
+@media screen and (min-width:600px) {
+    body {
+        max-width: 600px;
+        margin: 48px auto;
+    }
+    .main-container {
+        margin: 16px;
+    }
 }
 
 h1 {
