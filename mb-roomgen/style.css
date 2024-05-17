@@ -13,7 +13,7 @@
     color-scheme: dark;
     --fg-default: #f7f7f7;
     --bg-default: #1e1e1e;
-    --fg-muted: #6e6e6e;
+    --fg-muted: #aaa;
     --bg-img: url('../mb-roomgen/bg_dark.png');
     --icon: url('../mb-roomgen/sun.png');
   }
@@ -122,8 +122,12 @@ button:active {
 
 #theme-toggle:hover {
     cursor: pointer;
+    color: var(--fg-default);
     background-color: transparent;
     border: 2px solid transparent;
+}
+#theme-label {
+    background-color: var(--bg-default);
 }
 
 .small-caps {
