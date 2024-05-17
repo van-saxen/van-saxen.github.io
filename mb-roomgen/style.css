@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=IM+Fell+DW+Pica+SC&family=IM+Fell+DW+Pica:ital@0;1&display=swap');
 
-
+*:focus-visible,
+*:focus {
+    outline: black solid;
+    outline-offset: 2px;
+    outline-width: 4px;
+    border-radius: 2px;
+}
 
 body {
     font-family: "IM Fell DW Pica", serif;
@@ -57,14 +63,6 @@ button:hover {
 
 button:active {
     transform: rotate(1deg);
-}
-
-button:focus-visible,
-button:focus {
-    outline: black solid;
-    outline-offset: 2px;
-    outline-width: 4px;
-    border-radius: 2px;
 }
 
 .small-caps {
