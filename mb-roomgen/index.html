@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body onload="newRoom()">
+        <div class="main-container">
+            <header aria-labelledby="page-title">
+                <h1 id="page-title">nameless, dark places</h1>
+                
+            </header>
+            <section aria-label="generator">
+                <p>You crawl deeper into the darkness and enter a...</p>
+                <div class="roomheader">
+                    <p id="changeRoomName" tabindex="-1"></p>
+                    <p id="changeAdjectives1"></p>
+                </div>
+                <ul>
+                    <li id="changeRoomDressing"></li>
+                    <li><span class="small-caps" id="changeDirection">:</span> <span id="changeAdjectives2"></span></li>
+                </ul>
+                <button id="button" onclick="newRoom(), moveFocus()">Delve deeper</button>
+            </section>
+            <footer>
+                Room Generator is an independent production by ASN and is not affiliated with Ockult Örtmästare Games or Stockholm Kartell. It is published under the MÖRK BORG Third Party License.
+            </footer>
+        </div>
+    </body>
+</html>
