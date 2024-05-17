@@ -38,10 +38,11 @@ function moveFocus() {
     document.getElementById("room-name").focus();
 }
 
-function newRoom() {
-    createRoom();
-    moveFocus();
-};
+function checkTheme() {
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'light'){ document.documentElement.setAttribute("data-theme", "dark"); }
+    else { document.documentElement.setAttribute("data-theme", "light"); }
+}
 
 function switchTheme() {
     const currentTheme = localStorage.getItem('theme');
@@ -56,3 +57,12 @@ function switchTheme() {
     }
 };
 
+function init() {
+    createRoom();
+    checkTheme();
+}
+
+function newRoom() {
+    createRoom();
+    moveFocus();
+};
