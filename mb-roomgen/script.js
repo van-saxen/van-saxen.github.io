@@ -41,4 +41,20 @@ function moveFocus() {
 function newRoom() {
     createRoom();
     moveFocus();
-}
+};
+
+
+
+function switchTheme() {
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'light'){
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem('theme', 'dark');
+    }
+    else {
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem('theme', 'light');
+    }
+};
+
