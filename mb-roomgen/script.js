@@ -1,10 +1,40 @@
-const ROOM_NAMES = ['Library', 'Crypt', 'Tomb', 'Guard room'];
-const SMELLS = ['putrid smell', 'sweet scent', 'burnt smell'];
-const SOUNDS = ['eerie silence', 'knocking from the walls', 'sounds of violin', 'muffled chatter'];
-const DOORS = ['wooden door'];
-const SMELL_CLUES = ['putrid smell', 'sweet scent', 'burnt smell'];
-const SOUND_CLUES = ['eerie silence', 'knocking from the walls', 'sounds of violin', 'muffled chatter'];
-const ROOM_DRESSINGS = ['Books on the shelf - test Presence DR14 to find a sacred scroll.', 'An open grave in the middle of the room.', 'Four lit torches light the room.', 'A cluttered table with very old food on it. Very old food.'];
+const ROOM_NAMES = [
+    'Library', 
+    'Crypt', 
+    'Tomb', 
+    'Guard room'
+];
+const SMELLS = [
+    'putrid smell', 
+    'sweet scent', 
+    'burnt smell'
+];
+const SOUNDS = [
+    'eerie silence', 
+    'knocking from the walls', 
+    'sounds of violin', 
+    'muffled chatter'
+];
+const DOORS = [
+    'wooden door'
+];
+const SMELL_CLUES = [
+    'putrid smell', 
+    'sweet scent', 
+    'burnt smell'
+];
+const SOUND_CLUES = [
+    'eerie silence', 
+    'knocking from the walls', 
+    'sounds of violin', 
+    'muffled chatter'
+];
+const ROOM_DRESSINGS = [
+    'Books on the shelf - test Presence DR14 to find a sacred scroll.', 
+    'An open grave in the middle of the room.', 
+    'Four lit torches light the room.', 
+    'A cluttered table with very old food on it. Very old food.'
+];
 const DIRECTIONS = ["north", "south", "east", "west"];
 
 function randomEntryFrom(array) {
