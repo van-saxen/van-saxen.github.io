@@ -98,10 +98,6 @@ button:hover {
     background-color: var(--fg-default);
 }
 
-button:active {
-    transform: rotate(1deg);
-}
-
 .dark-mode-container {
     width: 100%;
     display:flex;
