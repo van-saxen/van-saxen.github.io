@@ -47,7 +47,7 @@ const BACKGROUNDS = [
     }, 
     {
         name: 'Muscle', 
-        description: 'Whether you were a prize fighter, a hired thug, or a prestigious house guard, you know how to hold your own in a skirmish. Did you get tired of figh- ting or are you just looking for a new challenge?', 
+        description: 'Whether you were a prize fighter, a hired thug, or a prestigious house guard, you know how to hold your own in a skirmish. Did you get tired of fighting or are you just looking for a new challenge?', 
         talents: 'Intimidation, Brute Force, Tactics', 
         languages: 'Trade Tongue, Riftspeak',
         agilityBonus: 0,
@@ -119,7 +119,7 @@ const BACKGROUNDS = [
     },
     {
         name: 'Assassin *', 
-        description: 'You were unseen death, a murderer work- ing for whichever House paid you the most. Did a job gone wrong force you to adopt a new identity or are you finally done being a pawn in someone else’s game?', 
+        description: 'You were unseen death, a murderer working for whichever House paid you the most. Did a job gone wrong force you to adopt a new identity or are you finally done being a pawn in someone else’s game?', 
         talents: 'Poisons, Politics, Stealth', 
         languages: 'Trade Tongue, Riftspeak',
         agilityBonus: 1,
@@ -143,7 +143,7 @@ const BACKGROUNDS = [
     },
     {
         name: 'Guild Artisan *', 
-        description: 'Years of faceting glittering gems, sculpting statues, or weaving intricate patterns has sharpened your hands and eyes. Were you kicked out after ruining a job for a high- profile patron or do you still have friends within the guild?', 
+        description: 'Years of faceting glittering gems, sculpting statues, or weaving intricate patterns has sharpened your hands and eyes. Were you kicked out after ruining a job for a high-profile patron or do you still have friends within the guild?', 
         talents: 'Art, Repair, a talent of your choice related to your craft', 
         languages: 'Trade Tongue, Lahmaic Script',
         agilityBonus: 2,
@@ -155,7 +155,7 @@ const BACKGROUNDS = [
     },
     {
         name: 'Pit Fighter *', 
-        description: 'You are no stranger to the blood-stained dance floor of the arena. Did you become a fighter to make a name for yourself or were you forced to entertain a blood- thirsty crowd to pay off a debt?', 
+        description: 'You are no stranger to the blood-stained dance floor of the arena. Did you become a fighter to make a name for yourself or were you forced to entertain a bloodthirsty crowd to pay off a debt?', 
         talents: 'Performance, Athletics, Healing', 
         languages: 'Trade Tongue',
         agilityBonus: 1,
