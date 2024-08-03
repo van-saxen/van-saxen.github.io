@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>The Inkseeker Vat</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body onload="init()">
+        <div class="main-container">
+            <header aria-labelledby="page-title">
+                <h1 id="page-title">The Inkseeker Vat</h1>
+                <button id="button" onclick="newInkseeker()">New Inkseeker</button>
+            </header>
+            <section aria-labelledby="inseeker-name">
+                <p>You are...</p>
+                <div class="header">
+                    <h2 id="inseeker-name" tabindex="-1"></h2>
+                </div>
+                <div id="attribute-wrapper">
+                    <div>
+                        <p>Agility <span id="agility-score"></span></p>
+                        <p>Archive <span id="archive-score"></span></p>
+                        <p>Body <span id="body-score"></span></p>
+                    </div>
+                    <div>
+                        <p>Mask <span id="mask-score"></span></p>
+                        <p>Spirit <span id="spirit-score"></span></p>
+                        <p>HP <span id="hp-score"></span></p>
+                    </div>
+                </div>
+                <hr>
+                <div id="background-wrapper">
+                    <h3 id="background-name"></h3>
+                    <p id="background-description"></p>
+                    <p><strong>Talents</strong>: <span id="background-talents"></span></p>
+                    <p><strong>Languages</strong>: <span id="background-languages"></span></p>
+                </div>
+                <hr>
+                <div id="archetype-wrapper">
+                    <h3 id="archetype-name"></h3>
+                    <p id="archetype-description"></p>
+                    <p><strong>Starting feature</strong>: <span id="archetype-feature""></span></p>
+                </div>
+                <hr>
+                <div id="equipment-wrapper">
+                    <h3>Equipment</h3>
+                    <p>Electrum vial with <span id="eq-drops"></span> drops</p>
+                    <p id="eq-common-weapon"></p>
+                    <p id="eq-toolkit"></p>
+                    <p>Torches</p>
+                    <p>Rations</p>
+                </div>
+                <hr>
+            </section>
+            
+            <footer>
+                <p style="margin-bottom:32px">* - Included in The Electrum Archive: Issue #02</p>
+                <div class="compatible-logo">
+                    <p id="cl-line-one">the</p>
+                    <p id="cl-line-two">electrum</p>
+                    <p id="cl-line-three">archive</p>
+                    <p id="cl-line-four">compatible</p>
+                </div>
+                <strong>The Inkseeker Vat</strong> is an independent production by vanSaxen and is not affiliated with CULT OF THE LIZARD KING. It is published under the TEA Third Party License. 
+                <div class="dark-mode-container">
+                    <button
+                        id="theme-toggle"
+                        aria-labelledby="theme-label"
+                        onclick="switchTheme()"
+                    ><span id="theme-label">Switch theme</span></button>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
+    font-family: 'Konstata'; /* Give your font a unique name */
+    src: url('tea-gen/fonts/konstatastencil.ttf') format('ttf');
+    font-weight: normal;  /* Specify the font's weight */
+    font-style: normal;  /* Specify the font's style */
+  }
+@font-face {
+    font-family: 'Le Murmure'; /* Give your font a unique name */
+    src: url('tea-gen/fonts/LeMurmure-Regular.woff2') format('woff2');
+    font-weight: normal;  /* Specify the font's weight */
+    font-style: normal;  /* Specify the font's style */
+  }
+  @font-face {
+    font-family: 'Shadower'; /* Give your font a unique name */
+    src: url('tea-gen/fonts/Shadower.woff2') format('woff2');
+    font-weight: normal;  /* Specify the font's weight */
+    font-style: normal;  /* Specify the font's style */
+  }
+
+:root {
+    color-scheme: light;
+    --fg-default: #1e1e1e;
+    --bg-default: #fafafa;
+    --fg-muted: #1e1e1e;
+  }
+ 
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --fg-default: #f7f7f7;
+    --bg-default: #1e1e1e;
+    --fg-muted: #f7f7f7;
+  }
+
+button:focus-visible,
+button:focus {
+    outline: var(--fg-default) solid 4px;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+body {
+    color: var(--fg-default);
+    font-family: "Gentium Book Plus", serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 24px 16px;
+
+    display: flex;
+
+    background-color: var(--bg-default);
+    background-image: var(--bg-img);
+    background-repeat: repeat;
+    background-position: 50% 0;
+}
+
+.main-container {
+    margin: 0;
+    max-width:800px;
+}
+
+@media screen and (min-width:600px) {
+    body {
+        font-size: 1.2rem;
+        margin: 16px;
+    }
+    .main-container {
+        margin: 48px auto;
+        width: 50%;
+    }
+    button {
+        font-size: 1.2rem;
+        width: fit-content;
+    }
+}
+
+h1 {
+    letter-spacing: 2px;
+    font-family: 'Le Murmure';
+    font-size: 4em;
+    margin: 12px 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Shadower';
+    margin-bottom: 0px;
+}
+
+#room-adjectives {
+    margin-top: 0px;
+}
+
+hr {
+    border: 1px solid var(--fg-default);
+    border-top-width: 0;
+    margin: 12px 0;
+}
+
+ul {
+    padding-left: 24px;
+}
+
+button {
+    color: var(--fg-default);
+    background-color: transparent;
+    padding: 16px 32px;
+    border: 2px solid var(--fg-default);
+    font-family: "IM Fell DW Pica", serif;
+    font-size: 1.2rem;
+    width: 100%;
+}
+button:hover {
+    cursor: pointer;
+    color: var(--bg-default);
+    background-color: var(--fg-default);
+}
+
+.dark-mode-container {
+    width: 100%;
+    display:flex;
+}
+
+#theme-toggle {
+    background-color: transparent;
+    background-image: var(--icon);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 0;
+    border: 0;
+    margin: 16px auto;
+    border: 2px solid transparent;
+}
+
+#theme-toggle:hover {
+    cursor: pointer;
+    color: var(--fg-default);
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+#theme-label {
+    background-color: var(--bg-default);
+}
+
+footer {
+    margin: 48px 0;
+    color: var(--fg-muted);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+#room-adjectives {
+    font-style: italic;
+    font-weight: 100;
+}
+
+.compatible-logo{
+    margin-bottom: 32px;
+}
+
+.compatible-logo p {
+    font-family: 'Konstata';
+    margin: 0;
+}
+
+#cl-line-one {
+    font-size: 2em;
+    line-height: 1;
+}
+#cl-line-two {
+    font-size: 3em;
+    line-height: 0.7;
+}
+#cl-line-three {
+    font-size: 3.9em;
+    transform: scale(1, 2);
+}
+#cl-line-four {
+    font-family: "Gentium Book Plus", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    line-height: 1;
+    letter-spacing: 5px;
+}
+
+#attribute-wrapper div {
+    display:flex;
+    justify-content: space-evenly;
+    gap: 24px;
+}
+#attribute-wrapper p {
+    display:inline-grid;
+    text-align: center;
+}
