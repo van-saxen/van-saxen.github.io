@@ -1,3 +1,3 @@
 <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="52.5" y="52.5" width="135" height="135" stroke="black" stroke-width="33"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M36 36L204 36V204H36L36 36ZM69 69V171H171V69H69Z" fill="black"/>
 </svg>
