@@ -3,21 +3,24 @@ const NAMES = [
 ];
 
 const ARCHETYPES = [
-    {
+   {
         name: 'Fixer', 
         description: 'As a Fixer, you have a way of procuring things others can’t get their hands on, from valuable objects to well-guarded secrets.',
-        feature: ['Swift', 'Expertise', 'Backstab', 'Network', 'Supplies', 'Many pockets', 'Steely resolve *', 'Gold-tongued *', 'Healing touch *', 'Teamleader *']
+        feature: ['Swift', 'Expertise', 'Backstab', 'Network', 'Supplies', 'Many pockets', 'Steely resolve *', 'Gold-tongued *', 'Healing touch *', 'Teamleader *'],
+        hasspell: false
     }, 
     {
         name: 'Vagabond', 
         description: 'As a Vagabond, you know how to take care of yourself in the harsh world outside the city walls, and how to deal with the dangers that lurk there.',
-        feature: ['Maneuvers']
+        feature: ['Maneuvers'],
+        hasspell: false
         
-    }, 
+    },
     {
         name: 'Warlock', 
         description: 'As a Warlock, you manifest powerful spells by inhaling elder ink and calling upon spirits from the Realm Beyond.', 
-        feature: ['Spell names']
+        feature: ['Spell names'],
+        hasspell: true
     }];
 
 const BACKGROUNDS = [
@@ -281,6 +284,206 @@ const TOOLKITS = [
     }
 ];
 
+const SPELL_FORMS = [
+    'Armor',      
+    'Aura',       
+    'Beacon',     
+    'Beam',       
+    'Beast',      
+    'Blade',      
+    'Blast',      
+    'Bolt',       
+    'Bond',       
+    'Bubble',     
+    'Cascade',    
+    'Chariot',    
+    'Charm',      
+    'Claw',       
+    'Cloak',      
+    'Crown',      
+    'Cube',       
+    'Dance',      
+    'Dart',       
+    'Disk',       
+    'Door',       
+    'Eye',        
+    'Fang',       
+    'Feast',      
+    'Field',      
+    'Finger',     
+    'Gaze',       
+    'Grasp',      
+    'Guide',      
+    'Gust',       
+    'Hand',       
+    'Lock',       
+    'Mark',       
+    'Mask',       
+    'Monolith',   
+    'Oracle',     
+    'Pillar',     
+    'Pocket',     
+    'Prison',     
+    'Ring',       
+    'Ritual',     
+    'Seal',       
+    'Servant',    
+    'Shard',      
+    'Shield',     
+    'Silhouette', 
+    'Song',       
+    'Sphere',     
+    'Steed',      
+    'Strike',     
+    'Swarm',      
+    'Tentacle',   
+    'Torrent',    
+    'Trap',       
+    'Veil',       
+    'Voice',      
+    'Vortex',     
+    'Wall',       
+    'Ward',       
+    'Wave',       
+    'Web',        
+    'Whisper',    
+    'Wings',      
+    'Word']
+
+const SPELL_ADJECTIVES = [
+'Avenging',       
+'Banishing',      
+'Binding',        
+'Blazing',        
+'Blinding',       
+'Bright',         
+'Charming',       
+'Concealing',     
+'Confusing',      
+'Consuming',      
+'Controlling',    
+'Creeping',       
+'Crushing',       
+'Cryptic',        
+'Delicate',       
+'Diminishing',    
+'Disintegrating',
+'Draining',
+'Empowering',
+'Entangling',
+'Enveloping',
+'Erratic',
+'Expanding',
+'Fearsome',
+'Flaming',
+'Floating',
+'Freezing',
+'Glittering',
+'Hindering',
+'Illusory',
+'Intoxicating',
+'Invisible',
+'Iridescent',
+'Luminous',
+'Maddening',
+'Many-Colored',
+'Mesmerizing',
+'Oozing',
+'Paralyzing',
+'Petrifying',
+'Piercing',
+'Prismatic',
+'Pulsing',
+'Regenerating',
+'Rending',
+'Repelling',
+'Revealing',
+'Screaming',
+'Searing',
+'Sensitive',
+'Shifting',
+'Shimmering',
+'Sickening',
+'Silent',
+'Sleeping',
+'Slow',
+'Smoking',
+'Soothing',
+'Terrible',
+'Transforming',
+'Unseen',
+'Unbreakable',
+'Withering',
+'Yawning'
+]
+
+const SPELL_NOUNS = [
+'Acid',
+'Air',
+'Amber',
+'Ash',
+'Blood',
+'Bone',
+'Clay',
+'Cosmos',
+'Crystal',
+'Dark',
+'Death',
+'Deceit',
+'Dimension',
+'Doom',
+'Dream',
+'Earth',
+'Electrum',
+'Ember',
+'Emotion',
+'Energy',
+'Fire',
+'Flesh',
+'Force',
+'Fungus',
+'Greed',
+'Hate',
+'Health',
+'Heat',
+'Ice',
+'Iron',
+'Light',
+'Lightning',
+'Lore',
+'Malady',
+'Memory',
+'Might',
+'Mind',
+'Mist',
+'Negation',
+'Oil',
+'Pain',
+'Plant',
+'Poison',
+'Rage',
+'Rot',
+'Salt',
+'Sand',
+'Shadow',
+'Sight',
+'Skin',
+'Slime',
+'Soul',
+'Sound',
+'Spirit',
+'Star',
+'Stasis',
+'Steam',
+'Sun',
+'Terror',
+'Time',
+'Twilight',
+'Vermin',
+'Water',
+'Wind'
+]
+
 function randomEntryFrom(array) {
     return array[Math.floor(Math.random()*array.length)];
 }
@@ -322,6 +525,16 @@ function createInkseeker() {
     document.getElementById("eq-drops").innerHTML = Math.floor((d(8) + d(8)) * 2);
     document.getElementById("eq-common-weapon").innerHTML = weapon["weapon"] + " | damage: " + weapon["damage"] + " | speed: " + weapon["speed"] + weapon["note"];
     document.getElementById("eq-toolkit").innerHTML = toolkit["name"] + toolkit["notes"];
+
+    // Spell name
+    const form = randomEntryFrom(SPELL_FORMS);
+    const adjective = randomEntryFrom(SPELL_ADJECTIVES);
+    const noun = randomEntryFrom(SPELL_NOUNS);
+
+         if (archetype["hasspell"]==true && d(4) == 1) {document.getElementById("archetype-spell").innerHTML = ' (' + noun + ' ' + form + ')';}
+    else if (archetype["hasspell"]==true && d(4) == 2) {document.getElementById("archetype-spell").innerHTML = ' (' + adjective + ' ' + noun + ')';}
+    else if (archetype["hasspell"]==true && d(4) == 3) {document.getElementById("archetype-spell").innerHTML = ' (' + adjective + ' ' + form + ')';}
+    else                                               {document.getElementById("archetype-spell").innerHTML = ' (' + form + ' of ' + adjective + ' ' + noun + ')';};
 
 }
 function moveFocus() {
