@@ -71,7 +71,7 @@ a {
         background: white;
     }
     hr {
-        border: 1px solid black !important;
+        border: 1px solid black !important; 
     }
     .noPrint{
       display:none;
