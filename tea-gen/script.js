@@ -538,7 +538,7 @@ function createInkseeker() {
     else { template = ' (' + form + ' of ' + adjective + ' ' + noun + ')';};
 
     if (archetype["name"]==="Warlock") { document.getElementById("archetype-spell").innerHTML = template }
-    else {return};
+    else {document.getElementById("archetype-spell").innerHTML = ""};
 }
 
 function moveFocus() {
