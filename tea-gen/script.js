@@ -7,20 +7,17 @@ const ARCHETYPES = [
         name: 'Fixer', 
         description: 'As a Fixer, you have a way of procuring things others can’t get their hands on, from valuable objects to well-guarded secrets.',
         feature: ['Swift', 'Expertise', 'Backstab', 'Network', 'Supplies', 'Many pockets', 'Steely resolve *', 'Gold-tongued *', 'Healing touch *', 'Teamleader *'],
-        hasspell: false
     }, 
     {
         name: 'Vagabond', 
         description: 'As a Vagabond, you know how to take care of yourself in the harsh world outside the city walls, and how to deal with the dangers that lurk there.',
         feature: ['Maneuvers'],
-        hasspell: false
         
     },
     {
         name: 'Warlock', 
         description: 'As a Warlock, you manifest powerful spells by inhaling elder ink and calling upon spirits from the Realm Beyond.', 
         feature: ['Spell names'],
-        hasspell: true
     }];
 
 const BACKGROUNDS = [
@@ -532,15 +529,18 @@ function createInkseeker() {
     const form = randomEntryFrom(SPELL_FORMS);
     const adjective = randomEntryFrom(SPELL_ADJECTIVES);
     const noun = randomEntryFrom(SPELL_NOUNS);
-    const template = d(4);
+    const templateRoll = d(4);
+    var template;
+    
+    if (templateRoll === 1) { template = ' (' + noun + ' ' + form + ')';} 
+    else if (templateRoll === 2) { template = ' (' + adjective + ' ' + noun + ')'}
+    else if (templateRoll === 3) { template = ' (' + adjective + ' ' + form + ')'}
+    else { template = ' (' + form + ' of ' + adjective + ' ' + noun + ')';};
 
-         if (archetype["hasspell"]==true && template == 1) {document.getElementById("archetype-spell").innerHTML = ' (' + noun + ' ' + form + ')';}
-    else if (archetype["hasspell"]==true && template == 2) {document.getElementById("archetype-spell").innerHTML = ' (' + adjective + ' ' + noun + ')';}
-    else if (archetype["hasspell"]==true && template == 3) {document.getElementById("archetype-spell").innerHTML = ' (' + adjective + ' ' + form + ')';}
-    else if (archetype["hasspell"]==true && template == 4) {document.getElementById("archetype-spell").innerHTML = ' (' + form + ' of ' + adjective + ' ' + noun + ')';}
+    if (archetype["name"]==="Warlock") { document.getElementById("archetype-spell").innerHTML = template }
     else {return};
-
 }
+
 function moveFocus() {
     document.getElementById("name").focus();
 }
