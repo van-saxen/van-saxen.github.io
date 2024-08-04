@@ -9,12 +9,13 @@
     </head>
     <body onload="init()">
         <div class="main-container">
-            <header aria-labelledby="page-title">
+            <header class="noPrint" aria-labelledby="page-title">
                 <h1 id="page-title">The Inkseeker Vat</h1>
+                <p>A character generator for <a href="https://electrumarchive.com/">The Electrum Archive</a></p>
                 <button id="button" onclick="newInkseeker()">New Inkseeker</button>
             </header>
             <section aria-labelledby="inseeker-name">
-                <p>You are...</p>
+                <p class="noPrint">You are...</p>
                 <div class="header">
                     <h2 id="inseeker-name" tabindex="-1"></h2>
                 </div>
@@ -52,10 +53,11 @@
                     <p>Torches</p>
                     <p>Rations</p>
                 </div>
-                <hr>
+                <hr class="noPrint" >
             </section>
             
-            <footer>
+            <footer class="noPrint">
+                
                 <p style="margin-bottom:32px">* - Included in The Electrum Archive: Issue #02</p>
                 <div class="compatible-logo">
                     <p id="cl-line-one">the</p>
@@ -64,7 +66,10 @@
                     <p id="cl-line-four">compatible</p>
                 </div>
                 <strong>The Inkseeker Vat</strong> is an independent production by vanSaxen and is not affiliated with CULT OF THE LIZARD KING. It is published under the TEA Third Party License. 
-                <div class="dark-mode-container">
+                <div class="footer-button-container">
+                    <button onclick="window.print();">
+                        Print
+                    </button>
                     <button
                         id="theme-toggle"
                         aria-labelledby="theme-label"

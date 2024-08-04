@@ -60,6 +60,24 @@ body {
     max-width:800px;
 }
 
+a {
+    color: var(--fg-default);
+}
+
+
+@media print {
+    body{
+        color: black;
+        background: white;
+    }
+    hr {
+        border: 1px solid black !important;
+    }
+    .noPrint{
+      display:none;
+    }
+  }
+
 @media screen and (min-width:600px) {
     body {
         font-size: 1.2rem;
@@ -119,9 +137,11 @@ button:hover {
     background-color: var(--fg-default);
 }
 
-.dark-mode-container {
+.footer-button-container {
+    margin-top:32px;
     width: 100%;
     display:flex;
+    gap:16px;
 }
 
 #theme-toggle {
@@ -132,7 +152,7 @@ button:hover {
     background-repeat: no-repeat;
     padding: 0;
     border: 0;
-    margin: 16px auto;
+    padding: 16px auto;
     border: 2px solid transparent;
 }
 
