@@ -488,7 +488,9 @@ function randomEntryFrom(array) {
     return array[Math.floor(Math.random()*array.length)];
 }
 function d(dice) { 
-    return Math.floor(Math.random() * (dice - 1 + 1) + 1);
+    var roll = Math.floor(Math.random() * (dice - 1 + 1) + 1);
+    return roll;
+    console.log(roll);
   }
   
 
@@ -530,18 +532,18 @@ function createInkseeker() {
     const form = randomEntryFrom(SPELL_FORMS);
     const adjective = randomEntryFrom(SPELL_ADJECTIVES);
     const noun = randomEntryFrom(SPELL_NOUNS);
+    const template = d(4);
 
-         if (archetype["hasspell"]==true && d(4) == 1) {document.getElementById("archetype-spell").innerHTML = ' (' + noun + ' ' + form + ')';}
-    else if (archetype["hasspell"]==true && d(4) == 2) {document.getElementById("archetype-spell").innerHTML = ' (' + adjective + ' ' + noun + ')';}
-    else if (archetype["hasspell"]==true && d(4) == 3) {document.getElementById("archetype-spell").innerHTML = ' (' + adjective + ' ' + form + ')';}
-    else                                               {document.getElementById("archetype-spell").innerHTML = ' (' + form + ' of ' + adjective + ' ' + noun + ')';};
+         if (archetype["hasspell"]==true && template == 1) {document.getElementById("archetype-spell").innerHTML = ' (' + noun + ' ' + form + ')';}
+    else if (archetype["hasspell"]==true && template == 2) {document.getElementById("archetype-spell").innerHTML = ' (' + adjective + ' ' + noun + ')';}
+    else if (archetype["hasspell"]==true && template == 3) {document.getElementById("archetype-spell").innerHTML = ' (' + adjective + ' ' + form + ')';}
+    else if (archetype["hasspell"]==true && template == 4) {document.getElementById("archetype-spell").innerHTML = ' (' + form + ' of ' + adjective + ' ' + noun + ')';}
+    else {return};
 
 }
 function moveFocus() {
-    document.getElementById("room-name").focus();
+    document.getElementById("name").focus();
 }
-
-// Dark mode... needs refactoring quite bad
 
 function checkTheme() {
     const currentTheme = localStorage.getItem('theme');
