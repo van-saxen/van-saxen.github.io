@@ -93,6 +93,12 @@ a {
     }
 }
 
+@media screen and (max-width:599px) {
+    .noMobile{
+        display:none;
+      }
+}
+
 h1 {
     letter-spacing: 2px;
     font-family: 'Le Murmure';
