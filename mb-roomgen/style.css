@@ -3,12 +3,12 @@
 @font-face {
     font-family: 'Calling Code';
     font-weight: normal;
-    src: url('../mb-roomgen/fonts/calling-code-regular.otf');
+    src: url('./fonts/calling-code-regular.otf');
 }
 @font-face {
     font-family: 'Calling Code';
     font-weight: bold;
-    src: url('../mb-roomgen/fonts/calling-code-bold.otf');
+    src: url('./fonts/calling-code-bold.otf');
 }
 
 :root {
@@ -16,8 +16,8 @@
     --fg-default: #1e1e1e;
     --bg-default: #fafafa;
     --fg-muted: #595959;
-    --bg-img: url('../mb-roomgen/bg_light.png');
-    --icon: url('../mb-roomgen/moon.png');
+    --bg-img: url('./bg_light.png');
+    --icon: url('./moon.png');
   }
  
   [data-theme="dark"] {
@@ -25,8 +25,8 @@
     --fg-default: #f7f7f7;
     --bg-default: #1e1e1e;
     --fg-muted: #aaa;
-    --bg-img: url('../mb-roomgen/bg_dark.png');
-    --icon: url('../mb-roomgen/sun.png');
+    --bg-img: url('./bg_dark.png');
+    --icon: url('./sun.png');
   }
 
 button:focus-visible,
