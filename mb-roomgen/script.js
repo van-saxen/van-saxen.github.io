@@ -193,10 +193,56 @@ const ROOM_DRESSINGS = [
     'A cluttered table with very old food on it. Very old food.'
 ];
 const MONSTERS = [
-    //TODO
-    {monster: "Blood-Drenched Skeleton", hp: "7", morale: "8", armourname: "No armour", armourvalue: "", weaponname: "Shortsword", weaponvalue: "d4" , special: "Skulks about, impossibly soundless. Attacks by surprise. Can mimic voices to lure victims, but can only repeat what it has heard. Attacks on them with piercing weapons are DR14. Any strike doing 5 or more damage destroys the skeleton completely."},
-    {monster: "Blood-Drenched Skeleton", hp: "7", morale: "8", armourname: "No armour", armourvalue: "", weaponname: "Knife", weaponvalue: "d4" , special: "Skulks about, impossibly soundless. Attacks by surprise. Can mimic voices to lure victims, but can only repeat what it has heard. Attacks on them with piercing weapons are DR14. Any strike doing 5 or more damage destroys the skeleton completely."},
-    {monster: "Blood-Drenched Skeleton", hp: "7", morale: "8", armourname: "No armour", armourvalue: "", weaponname: "Bony knuckles", weaponvalue: "d2" , special: "Skulks about, impossibly soundless. Attacks by surprise. Can mimic voices to lure victims, but can only repeat what it has heard. Attacks on them with piercing weapons are DR14. Any strike doing 5 or more damage destroys the skeleton completely."}
+    //MÖRKBORG CORE
+    {monster: "Goblin", hp: "6", morale: "7", armourname: "Ropy skin", armourvalue: "-d2", weaponname: "Knife/shortbow", weaponvalue: "d4", special: "Quick, attacks and defence are DR14. Goblin curse."},
+    {monster: "Scum", hp: "7", morale: "8", armourname: "No armour", armourvalue: "", weaponname: "Poisoned knife", weaponvalue: "d4 + special", special: "Poisoned knife. Test Toughness DR10 or become infected."},
+    {monster: "Berserker", hp: "13", morale: "9", armourname: "Hardened skin", armourvalue: "-d2", weaponname: "Wields (d4)", weaponvalue: "1. Long flail d8, 2. Heavy mace d6, 3. Chained sword d6, 4. Huge warhammer d10", special: "Attacks twice per round but doesn’t have time for defence (DR10 to hit them)."},
+    {monster: "Wraith", hp: "15", morale: "—", armourname: "No armour", armourvalue: "", weaponname: "Touch", weaponvalue: "d4 + special", special: "Swift, elusive and difficult to hit (DR14). These soundless phantoms always win initiative. ❡ Their touch drains Strength, Presence and Agility by 1 for the duration of the fight."},
+    {monster: "Blood-Drenched Skeleton", hp: "7", morale: "8", armourname: "No armour", armourvalue: "", weaponname: "Shortsword / Knife / Bony knuckles", weaponvalue: "d4 / d4 / d2", special: "Skulks about, impossibly soundless. Attacks by surprise. Can mimic voices to lure victims, but can only repeat what it has heard. ❡ Attacks on them with piercing weapons are DR14. Any strike doing 5 or more damage destroys the skeleton completely."},
+    {monster: "Lich", hp: "15", morale: "—", armourname: "Barrier (necro)", armourvalue: "-d4", weaponname: "Strike", weaponvalue: "d6 + special", special: "Paralyzing touch (Presence DR14 every round to break free). No one can use Powers near this anti-magical wound in reality. ❡ Every round they can steal the contents of Skull a nearby scroll and use this 100s Power against its owner."},
+    {monster: "Troll", hp: "32", morale: "special", armourname: "Thick hide", armourvalue: "-d2", weaponname: "Fist", weaponvalue: "2d6", special: "Easy to hit; attacks are DR10. attacks are DR10. ❡ Cowards despite their size. Usually retreat if badly wounded. Never forget who hurt them. They grow larger during the healing process and will definitely come back, stronger than before. Any HP healed is added to their maximum HP. Every time they return, add another d6 to their damage."},
+    {monster: "Zombie", hp: "7", morale: "—", armourname: "Leather scraps", armourvalue: "-d2", weaponname: "Claw/bite", weaponvalue: "d2 + special", special: "Anyone bitten tests Toughness DR8 or dies within two days before rising as a zombie. The only cure or vaccine is said to be found at the peak of a pale mountain within an infinitely-miserable forest of dark leaves."},
+    {monster: "Undead Doll", hp: "11", morale: "—", armourname: "Porcelain", armourvalue: "-d2", weaponname: "Claws/piercing bite", weaponvalue: "d4", special: "Their mad gaze demands a Presence DR12 test at the start of combat to avoid being frozen with fear for d4 rounds."},
+    {monster: "Grotesque", hp: "18", morale: "—", armourname: "Clay/stone", armourvalue: "-d6", weaponname: "Claws / Eye-beam", weaponvalue: "d6 / d8", special: "Lurking round churches, stalking graveyards, creeping closer when you look away. Disturbingly still, difficult to discern against gray stone and hard to recognize even when seen. They move slowly and are easy to hit (DR10). ❡ Their terrifying gaze is used on 1–2 on a d6 each round. Always hits."},
+    {monster: "Wickhead knife-wielder", hp: "10", morale: "7", armourname: "No armour", armourvalue: "", weaponname: "Knife with dried blood", weaponvalue: "d4", special: "Sneaks up behind its victims, silent as the grave. ❡ 25% chance wounds from the insanely filthy knife become infected. ❡ Can magically douse all nearby light sources, ignite its own blinding light and attack. Then vanish into the darkness."},
+    {monster: "Wyvern", hp: "25", morale: "10", armourname: "Thick hide", armourvalue: "-d4", weaponname: "Bite/sting", weaponvalue: "d6", special: "60% chance that she bites. The tail's venomous sting can paralyze a victim. Test Toughness DR14 to avoid one painful hour of paralysis."},
+    {monster: "Earthbound", hp: "8", morale: "7", armourname: "Leather", armourvalue: "-d2", weaponname: "Staff/Femur", weaponvalue: "d4", special: "Potential follower. MB pg.70"},
+    {monster: "Wild Wickhead", hp: "10", morale: "7", armourname: "No armour", armourvalue: "", weaponname: "Knife", weaponvalue: "d4", special: "Potential follower. MB pg.70"},
+    {monster: "Pale one", hp: "5", morale: "8", armourname: "No armour", armourvalue: "", weaponname: "Unarmed", weaponvalue: "d2", special: "Potential follower. MB pg.71"},
+    {monster: "Prowler", hp: "8", morale: "8", armourname: "Leather", armourvalue: "-d2", weaponname: "Knife / Femur / Filthy shortsword", weaponvalue: "d4 / d4 / d4+1", special: "Potential follower. MB pg.71"},
+    //THE DEATH ZIGGURAT
+    {monster: "Rot Priest", hp: "10", morale: "8", armourname: "No armour", armourvalue: "", weaponname: "Claws", weaponvalue: "d6", special: "Devour: DR12 Strength test or be grappled and next turn, devoured (d8 damage per round). ❡ Rotting touch: Those damaged by a rot priest do not heal when resting until healed magically or resting one night."},
+    {monster: "Horn Beast", hp: "8", morale: "—", armourname: "Shifting bones", armourvalue: "-d4", weaponname: "Claws", weaponvalue: "d6", special: "Attacks twice per round"},
+    {monster: "Undead", hp: "3", morale: "—", armourname: "No armour", armourvalue: "", weaponname: "Claw/bite", weaponvalue: "d4", special: "Grapple: DR12 Strength test or be grappled. Subsequent attacks (by all present undead) are claw or bite (d4). ❡ Will not die: Only stays dead for one round, then rises again with 1 HP. ❡ Slow: Can always be outrun (unless you are grappled)."},
+    //GRAVES LEFT WANTING
+    {monster: "Widow-wraith", hp: "15", morale: "—", armourname: "No armour", armourvalue: "", weaponname: "Icy touch", weaponvalue: "d4 + special", special: "Her sobbing alerts anyone to her presence; she always loses initiative. ❡ Touch drains Strength, Presence, and Agility by 1 for the fight’s duration."},
+    {monster: "Hungry Zombie", hp: "6", morale: "—", armourname: "Leather scraps", armourvalue: "-d2", weaponname: "Claw/bite", weaponvalue: "d2 + special", special: "Test Toughness DR8 or die turning into a zombie after 2 days."},
+    {monster: "Rotted Skeleton", hp: "5", morale: "7", armourname: "No armour", armourvalue: "", weaponname: "Knuckles", weaponvalue: "d2", special: "Whenever it takes damage, a puff of vile marrow-dust leaks from its broken bones. ❡ Melee attackers test Toughness DR10 or become infected."},
+    {monster: "Fogbound Skeleton", hp: "7", morale: "8", armourname: "No armour", armourvalue: "", weaponname: "Weapon of condensed fog", weaponvalue: "d4", special: "Shatters if an attack deals 5+ damage, but otherwise, damage is reduced to 1."},
+    {monster: "Twice-grown Corpse Fly", hp: "4", morale: "—", armourname: "Exoskeleton", armourvalue: "-d4", weaponname: "Bite", weaponvalue: "d4 + special", special: "Test Toughness DR12 or become host for a dozen freshly laid fly eggs. Extract them within d6 days or watch them hatch in your corpse."},
+    //SEPULCHRE OF THE SWAMP WITCH
+    {monster: "Emerald Serpent", hp: "8", morale: "—", armourname: "No armour", armourvalue: "", weaponname: "Bite", weaponvalue: "d2 + Emerald Venom", special: "Lightning reflexes: Attacks thrice each round, and melee attacks against her use Agility DR16 instead of Strength. ❡ Emerald Venom: Test Toughness DR12 or be afflicted (no test if willingly bitten). Everything turns chromatic. Fire burns with colors never seen before: jale, dolm, and ulfire. Spectral leaf buds grow from dead matter. Everything is kaleidoscopic. Nature sings just for you. There is beauty in the world. Certain truths become clear to you. You get −1 on initiative (if using individual initiative) and fumble on 1–3 for the duration of the 7-day-long high. You also perceive some things dif ferently here."},
+    {monster: "Strange Serpent Drug Cultist", hp: "4", morale: "4", armourname: "Gatorskin vestment", armourvalue: "-d3", weaponname: "Knife or club", weaponvalue: "d4", special: "Drug-addled: Immune to mind-affecting powers"},
+    {monster: "Forked-Tongue Devotee", hp: "9", morale: "9", armourname: "Gatorskin hood and vestment", armourvalue: "-d4", weaponname: "Forked dagger", weaponvalue: "d4 + poison", special: "Poison: Test Toughness DR10 or become infected and drowsy, raising thedifficultyofallattackanddefence tests by +2 for D4 hours. ❡ Viper spit: Test Agility DR12 to avoid being blinded D3 rounds."},
+    //DEATH TEMPLE SZTUN
+    {monster: "Skeleton", hp: "6", morale: "—", armourname: "Chain", armourvalue: "-d4", weaponname: "Halbard or Scythe", weaponvalue: "d6", special: "Old and dry: DR10 to hit them."},
+    {monster: "Giant spider", hp: "8", morale: "8", armourname: "Carapace", armourvalue: "-d2", weaponname: "Bite", weaponvalue: "d4", special: "—"},
+    {monster: "Chained Skeleton", hp: "6", morale: "—", armourname: "No armour", armourvalue: "", weaponname: "Grab/strike", weaponvalue: "d2", special: "Grapple: DR12 Strength test or be grappled."},
+    //ROTBLACK SLUDGE
+    {monster: "Dusk Gnoum", hp: "4", morale: "7", armourname: "No armour", armourvalue: "", weaponname: "Knife", weaponvalue: "d4", special: "DR14 to hit them."},
+    {monster: "Mongrel", hp: "8", morale: "9", armourname: "No armour", armourvalue: "", weaponname: "Bite", weaponvalue: "d4+1", special: "Infection if Toughness DR12 is failed."},
+    {monster: "Guard with sharpened teeth", hp: "6", morale: "7", armourname: "Leather", armourvalue: "-d2", weaponname: "Shortsword/bite", weaponvalue: "d4", special: "—"},
+    {monster: "Nesting Death", hp: "12", morale: "—", armourname: "Thick carapace", armourvalue: "-d2", weaponname: "Bite", weaponvalue: "d4", special: "Wins initiative on 1—4. ❡ Test Toughness DR12 to avoid freezing (tests are DR+2 for one hour)"},
+    {monster: "Slumbering skeleton", hp: "5", morale: "7", armourname: "No armour", armourvalue: "", weaponname: "Bony fists", weaponvalue: "d4", special: "Thoughtless, without goal."},
+    {monster: "Gutworm", hp: "50", morale: "—", armourname: "Thick gide", armourvalue: "-d6", weaponname: "Razor-sharp teeth", weaponvalue: "d10", special: "Test Agility DR6 or be devoured, dying instantly. ❡ Can travel vast distances."},
+    //THE UNSEEN VAULTS OF THE OPTIC EXPERIMENT — TO FINISH
+    {monster: "Observer", hp: "20", morale: "—", armourname: "Chitin", armourvalue: "-d6", weaponname: "Bite", weaponvalue: "d6", special: "3 random rays each round, at random targets. Test Presence DR12 to avoid effect. ❡ Optic Pg.9 ❡ Essenitally a Beholder."},
+
+
+    
+
+
+
 ];
 const TREASURES_EQUIPMENT = [
     'Backpack, roll Something Valuable for contents',
@@ -389,7 +435,7 @@ const ITEMS = [
     '60 silver',
     'a femur (d4 damage)'
 ];
-const DIRECTIONS = ["north", "south", "east", "west"];
+const DIRECTIONS = ["NORTH", "SOUTH", "EAST", "WEST"];
 
 function d(dice) { 
     var roll = Math.floor(Math.random() * (dice - 1 + 1) + 1);
@@ -420,7 +466,9 @@ function createRoom() {
     document.getElementById("room-adjectives").innerHTML = roomDressing;
 
     // Composition
+    document.getElementById("room-content").innerHTML = '';
     const roomMonster = randomEntryFrom(MONSTERS)
+    const wanderingMonster = randomEntryFrom(MONSTERS)
     const roomTrapTrigger = randomEntryFrom(TRAP_TRIGGERS);
     const roomTrapEffect = randomEntryFrom(TRAP_EFFECTS);
     const roomTrapBuilder = randomEntryFrom(TRAP_BUILDERS);
@@ -503,7 +551,7 @@ function createRoom() {
     switch (roomCompositionRoll) {
         case 2:
             // Treasure guarded by trap
-            document.getElementById("room-content").innerHTML = "You have found treasure: " + roomTreasure + "<br /><br /><b>Guarded by a trap that is triggered by: </b>" + roomTrapTrigger + " <br /> <b>" + roomTrapEffect.effect + "</b> " + roomTrapEffect.description + "<br> <b>Who or what built the trap?</b> " + roomTrapBuilder;
+            document.getElementById("room-content").innerHTML = "You have found an item: " + roomTreasure + "<br /><br /><b>Guarded by a trap that is triggered by: </b>" + roomTrapTrigger + " <br /> <b>" + roomTrapEffect.effect + "</b> " + roomTrapEffect.description + "<br> <b>Who or what built the trap?</b> " + roomTrapBuilder;
             break;
         case 3:
             // Trick or trap
@@ -511,7 +559,7 @@ function createRoom() {
             break;
         case 4:
             // Treasure guarded by monster
-            document.getElementById("room-content").innerHTML = "You have found treasure: " + roomTreasure + "<br /><br />Guarded by " + "<b>" + roomMonster.monster + "</b> <br /> <b>HP </b>" + roomMonster.hp + ",   <b>Morale </b>" + roomMonster.morale + ", <br /> <b>" + roomMonster.armourname + " </b>" + roomMonster.armourvalue + "<br /> <b>" + roomMonster.weaponname + " </b>" + roomMonster.weaponvalue + "<br /> <b>Special: </b>" + roomMonster.special;
+            document.getElementById("room-content").innerHTML = "You have found an item: " + roomTreasure + "<br /><br />Guarded by " + "<b>" + roomMonster.monster + "</b> <br /> <b>HP </b>" + roomMonster.hp + ",   <b>Morale </b>" + roomMonster.morale + ", <br /> <b>" + roomMonster.armourname + " </b>" + roomMonster.armourvalue + "<br /> <b>" + roomMonster.weaponname + " </b>" + roomMonster.weaponvalue + "<br /> <b>Special: </b>" + roomMonster.special;
             break;
         case 5: 
             // Monster
@@ -527,15 +575,20 @@ function createRoom() {
             break;
         case 10:
             // Treasure guarded by monster
-            document.getElementById("room-content").innerHTML = "You have found treasure: " + roomTreasure + "<br /><br />Guarded by " + "<b>" + roomMonster.monster + "</b> <br /> <b>HP </b>" + roomMonster.hp + ",   <b>Morale </b>" + roomMonster.morale + ", <br /> <b>" + roomMonster.armourname + " </b>" + roomMonster.armourvalue + "<br /> <b>" + roomMonster.weaponname + " </b>" + roomMonster.weaponvalue + "<br /> <b>Special: </b>" + roomMonster.special;
+            document.getElementById("room-content").innerHTML = "You have found an item: " + roomTreasure + "<br /><br />Guarded by " + "<b>" + roomMonster.monster + "</b> <br /> <b>HP </b>" + roomMonster.hp + ",   <b>Morale </b>" + roomMonster.morale + ", <br /> <b>" + roomMonster.armourname + " </b>" + roomMonster.armourvalue + "<br /> <b>" + roomMonster.weaponname + " </b>" + roomMonster.weaponvalue + "<br /> <b>Special: </b>" + roomMonster.special;
             break;
         case 11: case 12:
             // Unguarded treasure
-            document.getElementById("room-content").innerHTML = "You have found treasure: " + roomTreasure
+            document.getElementById("room-content").innerHTML = "You have found an item: " + roomTreasure
             break;
         default:
           console.log('default');
       }
+      const wanderingMonsterChance = Math.random() <= 0.1;
+      if (wanderingMonsterChance === true) {
+        document.getElementById("room-content").innerHTML += "<br /><br />You stumble into a wandering <b>" + wanderingMonster.monster + "</b> <br /> <b>HP </b>" + wanderingMonster.hp + ",   <b>Morale </b>" + wanderingMonster.morale + ", <br /> <b>" + wanderingMonster.armourname + " </b>" + wanderingMonster.armourvalue + "<br /> <b>" + wanderingMonster.weaponname + " </b>" + wanderingMonster.weaponvalue + "<br /> <b>Special: </b>" + wanderingMonster.special;
+        }
+
     
 
 
@@ -572,17 +625,17 @@ function createRoom() {
     // If it's a corridor, handle it differently (example: no adjectives or other custom logic)
     let exitContent;
     if (isCorridor) {
-        exitContent = ` a corridor${soundDivider}${soundText}${smellText ? ', ' + smellText : ''}.`;
+        exitContent = `: a corridor${soundDivider}${soundText}${smellText ? ', ' + smellText : ''}.`;
     } else {
-        exitContent = ` ${doorMaterial}, ${doorAdjective}${soundDivider}${soundText}${smellDivider}${smellText}.`;
+        exitContent = `: ${doorMaterial}, ${doorAdjective}${soundDivider}${soundText}${smellDivider}${smellText}.`;
     }
 
     // Create the list item and its contents
     const exitItem = document.createElement('li');
 
     const doorDirectionSpan = document.createElement('span');
-    doorDirectionSpan.classList.add('small-caps', 'door-direction');
-    doorDirectionSpan.innerHTML = direction + ':';
+    doorDirectionSpan.classList.add(/*'small-caps', */'door-direction');
+    doorDirectionSpan.innerHTML = direction + '';
 
     const clueAdjectivesSpan = document.createElement('span');
     clueAdjectivesSpan.classList.add('clue-adjectives');

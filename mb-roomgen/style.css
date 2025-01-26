@@ -1,14 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=IM+Fell+DW+Pica:ital@0;1&display=swap');
 
 @font-face {
+    font-family: 'KlausBFraktur';
+    font-weight: normal;
+    src: url('./fonts/KlausBFraktur.ttf');
+}
+
+@font-face {
     font-family: 'Calling Code';
     font-weight: normal;
     src: url('./fonts/calling-code-regular.otf');
 }
 @font-face {
     font-family: 'Calling Code';
+    font-weight: normal;
+    font-style: italic;
+    src: url('./fonts/calling-code-regular-italic.otf');
+}
+@font-face {
+    font-family: 'Calling Code';
     font-weight: bold;
     src: url('./fonts/calling-code-bold.otf');
+}
+@font-face {
+    font-family: 'Calling Code';
+    font-weight: bold;
+    font-style: italic;
+    src: url('./fonts/calling-code-bold-italic.otf');
 }
 
 :root {
@@ -38,10 +56,12 @@ button:focus {
 
 body {
     color: var(--fg-default);
-    font-family: "IM Fell DW Pica", serif;
-    font-size: 1rem;
+    /*font-family: "IM Fell DW Pica", serif;*/
+    font-family: "Calling Code", monospace;
+    font-size: 0.9rem;
     font-weight: 400;
     margin: 24px 16px;
+    line-height: 1.45;
 
     display: flex;
 
@@ -58,7 +78,7 @@ body {
 
 @media screen and (min-width:600px) {
     body {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin: 16px;
     }
     .main-container {
@@ -72,42 +92,41 @@ body {
 }
 
 h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     letter-spacing: 2px;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'KlausBFraktur';
     margin-bottom: 8px;
-}
-
-#room-adjectives {
-    margin-top: 0px;
+    letter-spacing: 0.3px;
 }
 
 .roomheader {
-    border-bottom: 2px dotted var(--fg-default);
+    border-bottom: 1px solid var(--fg-default);
     border-top-width: 0;
 }
 
 ul {
     padding-left: 24px;
+    list-style-type: "❡ ";
 }
 
 button {
     color: var(--fg-default);
     background-color: transparent;
     padding: 16px 32px;
-    border: 2px solid var(--fg-default);
-    font-family: "IM Fell DW Pica", serif;
+    border: 1px solid var(--fg-default);
+    font-family: "Calling Code", monospace;
     font-size: 1.2rem;
     width: 100%;
 }
 button:hover {
     cursor: pointer;
-    color: var(--bg-default);
-    background-color: var(--fg-default);
+    outline: 1px solid var(--fg-default);
+    font-style: italic;
 }
 
 .dark-mode-container {
@@ -123,8 +142,8 @@ button:hover {
     background-repeat: no-repeat;
     padding: 0;
     border: 0;
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     margin: 16px auto;
     border-radius: 999px;
 }
@@ -141,7 +160,14 @@ button:hover {
 
 .small-caps {
     font-family: "IM Fell DW Pica SC", serif;
+    font-size: 1.2em;
     font-weight: 700;
+}
+
+.door-direction {
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
 }
 
 footer {
@@ -152,12 +178,15 @@ footer {
 }
 
 #room-adjectives {
-    font-style: italic;
-    font-weight: 100;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 0px;
 }
 
 #room-content {
-    font-family: 'Calling Code';
-    font-size: 0.9em;
     padding: 24px 0;
+}
+
+li {
+    padding-bottom: 8px;
 }
