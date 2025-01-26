@@ -574,7 +574,7 @@ function createRoom() {
     if (isCorridor) {
         exitContent = ` a corridor${soundDivider}${soundText}${smellText ? ', ' + smellText : ''}.`;
     } else {
-        exitContent = `${doorMaterial}, ${doorAdjective}${soundDivider}${soundText}${smellDivider}${smellText}.`;
+        exitContent = ` ${doorMaterial}, ${doorAdjective}${soundDivider}${soundText}${smellDivider}${smellText}.`;
     }
 
     // Create the list item and its contents
