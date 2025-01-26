@@ -120,7 +120,8 @@ button {
     padding: 16px 32px;
     border: 1px solid var(--fg-default);
     font-family: "Calling Code", monospace;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
     width: 100%;
 }
 button:hover {
